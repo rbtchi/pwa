@@ -1,45 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <!-- Meta -->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="manifest" href="manifest.json">
-<!-- <link rel="manifest" href="manifest.webmanifest"> -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
 <!-- Title -->
 <title class="lang" for="resume">Robert Resume</title>
+<!--  -->
+    <link rel="manifest" href="./manifest.json">
+    <link rel="shortcut icon" href="/icons/favicon.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/icons/ios-icon-192x192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/ios-icon-180x180.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/icons/ios-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/icons/ios-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/icons/ios-icon-60x60.png" />
+    <link rel="apple-touch-startup-image" href="./public/icons/apple-touch-startup-image-1125x2436.png"
+        media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="./public/icons/apple-touch-startup-image-1242x2148.png"
+        media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="./public/icons/apple-touch-startup-image-1536x2048.png"
+        media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="./public/icons/apple-touch-startup-image-1668x2224.png"
+        media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="./public/icons/apple-touch-startup-image-2048x2732.png"
+        media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            console.log("瀏覽器支援 Service Worker")
+
+            navigator.serviceWorker
+                .register('./serviceWorker.js') // 註冊 Service Worker
+                .then(function (reg) {
+                    console.log('Registration succeeded. Scope is ' + reg.scope) // 註冊成功
+                })
+                .catch(function (error) {
+                    console.log('Registration failed with ' + error) // 註冊失敗
+                })
+        } else {
+            console.log("瀏覽器不支援 Service Worker")
+        }
+    </script>
 
 <!-- Favicons -->
-<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/web-icons/apple-touch-icon-57x57.png" />
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/web-icons/apple-touch-icon-114x114.png" />
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/web-icons/apple-touch-icon-72x72.png" />
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/web-icons/apple-touch-icon-144x144.png" />
-<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/web-icons/apple-touch-icon-60x60.png" />
-<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/web-icons/apple-touch-icon-120x120.png" />
-<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/web-icons/apple-touch-icon-76x76.png" />
-<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/web-icons/apple-touch-icon-152x152.png" />
-<link rel="icon" type="image/png" href="/web-icons/favicon-196x196.png" sizes="196x196" />
-<link rel="icon" type="image/png" href="/web-icons/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/png" href="/web-icons/favicon-32x32.png" sizes="32x32" />
-<link rel="icon" type="image/png" href="/web-icons/favicon-16x16.png" sizes="16x16" />
-<link rel="icon" type="image/png" href="/web-icons/favicon-128.png" sizes="128x128" />
-<meta name="application-name" content="&nbsp;"/>
-<meta name="msapplication-TileColor" content="#FFFFFF" />
-<meta name="msapplication-TileImage" content="/web-icons/mstile-144x144.png" />
-<meta name="msapplication-square70x70logo" content="/web-icons/mstile-70x70.png" />
-<meta name="msapplication-square150x150logo" content="/web-icons/mstile-150x150.png" />
-<meta name="msapplication-wide310x150logo" content="/web-icons/mstile-310x150.png" />
-<meta name="msapplication-square310x310logo" content="/web-icons/mstile-310x310.png" />
-
-<!-- Apple launch image (splash screen) -->
-<link rel="apple-touch-startup-image" href="/launch.png">
-
-<!-- Apple launch title (app name) -->
-<meta name="apple-mobile-web-app-title" content="PWA">
-
-<!-- Hide Safari web UI -->
-<meta name="apple-mobile-web-app-capable" content="yes">
 <!-- <link rel="shortcut icon" href="assets/img/favicon.png">
 <link rel="apple-touch-icon" href="assets/img/favicon_60x60.png">
 <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon_76x76.png">
@@ -1515,10 +1520,8 @@ window.paceOptions = {
 -->
 <!-- 18 -->
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-<script type=“text/javascript” src="main.js"></script>
-<script type=“text/javascript” src="jquery.i18n.properties-1.0.9.js"></script>
-<script type=“text/javascript” src="18.js"></script>
-
+<script src="assets/js/jquery.i18n.properties-1.0.9.js"></script>
+<script src="assets/js/18.js"></script>
 <script>
 $(function(){
 	if(screen.width >= 1920){
