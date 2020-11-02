@@ -61,6 +61,16 @@
 <!-- CSS Template -->
 <link rel="stylesheet" href="assets/css/theme.min.css" />
 <link rel="stylesheet" href="assets/css/color/orange-green.css" id="color" />
+<!-- GA -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DH6DWT530V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DH6DWT530V');
+</script>
 
 </head>
 
@@ -1504,20 +1514,6 @@ window.paceOptions = {
 <!-- Google Map API -->
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 
-<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information. -->
-<!--
-<script>
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-XXXXX-X']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-</script>
--->
 <!-- 18 -->
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 <script src="assets/js/jquery.i18n.properties-1.0.9.js"></script>
@@ -1618,6 +1614,7 @@ $(function(){
         addEventListener('scroll',processScroll);
     
     }(this);
+    console.log('lazyloading is working!!')
     </script>
 
 </body>
